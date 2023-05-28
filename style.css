@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  width: 1400px;
+  margin: 0 auto;
+  height: 150px;
+}
+
+#header h1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#header form {
+  float: right;
+}
+
+#header form #searchInput {
+  width: 200px;
+  height: 37px;
+}
+
+#header form #searchBtn {
+  width: 50px;
+  height: 40px;
+}
+
+#main {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#main ul {
+  margin: 20px 0 0 0;
+}
+#main ul li {
+  width: 300px;
+  list-style: none;
+  float: left;
+  padding: 20px;
+}
+
+li .wrap {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 5px 10px 12px 3px rgba(0, 0, 0, 0.4);
+}
+
+li h2 {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+li h3 {
+  position: absolute;
+  color: rgb(208, 204, 204);
+  top: 20px;
+  left: 20px;
+  font-size: 33px;
+}
+
+li .wrap span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 27px;
+  background: black;
+  line-height: 25px;
+  opacity: 0;
+  transition: 1s;
+  color: white;
+  font-size: 18px;
+  height: 450px;
+}
+
+ul li span:hover {
+  opacity: 0.8;
+}
+
+.wrap p {
+  display: none;
+}

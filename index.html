@@ -4,42 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet" />
-    <script src="script/script.js" defer></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
     <title>MIAPEDIA</title>
   </head>
   <body>
-    <h1>MIA PEDIA</h1>
-    <ul id="movieList"></ul>
-    <button onclick="getMovieList()">영화 가져오기</button>
-    <script>
-      const options = {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YmVjM2U3MzdhYzIyZDQxOGExZTBmNGRmZTEzNTY3ZiIsInN1YiI6IjY0NzFiZjQ0YmUyZDQ5MDExNmM4YTk2MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JvZ2uXWJg9pC1AfqkJeUENhOZIGdg7e9flH1BDoX6ME",
-        },
-      };
-      fetch(
-        "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
-        options
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          let results = data["results"];
-          results.forEach((a) => {
-            let title = a["title"];
-            let id = a["id"];
-            let overview = a["overview"];
-            let average = a["vote_average"];
-
-            const first = document.createElement("li");
-            first.textContent = `영화제목 : ${title} 줄거리 :${overview} 평점 : ${average}`;
-            movieList.append(first);
-          });
-        })
-        .catch((err) => console.error(err));
-    </script>
+    <div id="header">
+      <h1>
+        <a href="index.html"><img src="img/logo.png" alt="MIA PEDIA" /></a>
+      </h1>
+      <form>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="영화 이름을 입력해주세요"
+        />
+        <button id="searchBtn">검색</button>
+      </form>
+    </div>
+    <div id="main">
+      <ul id="movieList"></ul>
+    </div>
   </body>
 </html>
