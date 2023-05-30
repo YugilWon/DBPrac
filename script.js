@@ -28,14 +28,14 @@ function showMovieList(val) {
         if (title.toLowerCase().includes(val.toLowerCase())) {
           const movieInfo = document.createElement("li");
           movieInfo.innerHTML = ` <div class= "wrap">
-			                        <img src=${poster} alt="Movie Poster">
+			                              <img src=${poster} alt="Movie Poster">
                                     <h3>${rank}</h3>
-			                        <span>${overview}</span>
+			                              <span>${overview}</span>
                                     <p>${id}</p>
-			                    </div>
-			                    <h2>${title}</h2>
-			                    <p>개봉 ${date} 평점 ${average}</p>`;
-          movieList.append(movieInfo);
+			                            </div>
+			                            <h2>${title}</h2>
+			                            <p>개봉 ${date} 평점 ${average}</p>`;
+          movieList.appendChild(movieInfo);
         }
       });
     })
@@ -74,3 +74,19 @@ function showMovieInfo(e) {
 }
 
 movieList.addEventListener("click", showMovieInfo);
+
+// 페이지 로드시 커서 입력창
+window.onload = function () {
+  searchInput.focus();
+};
+
+// topBtn 클릭시 페이지 최상단으로 이동 (화살표함수)
+const topBtn = document.getElementById("topBtn");
+const showTopPage = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+topBtn.addEventListener("click", showTopPage);
