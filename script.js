@@ -42,7 +42,7 @@ function showMovieList(val) {
     .catch((err) => console.error(err));
 }
 
-// "" 가 입력된 상태로 함수 실행 --> 영화 전체목록 보여주기
+// "" 가 입력된 상태로 함수 실행 --> 영화 전체목록 보여줌
 showMovieList("");
 
 // 영화 검색기능
@@ -52,8 +52,8 @@ const searchBtn = document.getElementById("searchBtn");
 searchBtn.addEventListener("click", showSearchList);
 
 function showSearchList(e) {
-  movieList.innerHTML = "";
-  e.preventDefault();
+  movieList.innerHTML = ""; // 빈 여백값으로 만듬
+  e.preventDefault(); // 브라우저의 기본동작 제한, 폼 제출시 페이지가 새로고침 되는 것을 막음
   const val = searchInput.value;
   showMovieList(val);
 }
@@ -63,19 +63,15 @@ const movieList = document.getElementById("movieList");
 function showMovieInfo(e) {
   const wrapElement = e.target.closest(".wrap");
   if (wrapElement) {
-    const titleElement = wrapElement.nextElementSibling;
-    const idElement = wrapElement.querySelector("p");
-
-    const title = titleElement.textContent;
-    const id = idElement.textContent;
+    const title = wrapElement.nextElementSibling.textContent;
+    const id = wrapElement.querySelector("p").textContent;
 
     alert(`"${title}" 의 id는 "${id}" 입니다.`);
   }
 }
-
 movieList.addEventListener("click", showMovieInfo);
 
-// 페이지 로드시 커서 입력창
+// 페이지 로드시 커서 입력창에 위치
 window.onload = function () {
   searchInput.focus();
 };
