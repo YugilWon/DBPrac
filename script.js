@@ -22,7 +22,7 @@ function showMovieList(val) {
         let overview = a["overview"];
         let date = a["release_date"];
         let average = a["vote_average"];
-        let poster = `https://image.tmdb.org/t/p/w300` + a["poster_path"];
+        let poster = `https://image.tmdb.org/t/p/w200` + a["poster_path"];
         let rank = i + 1;
         // 대소문자 구분 없이 입력한 제목에 따른 영화 검색하기
         if (title.toLowerCase().includes(val.toLowerCase())) {

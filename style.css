@@ -9,13 +9,14 @@ a {
 }
 
 #header {
-  background-color: white;
   position: fixed;
-  left: 200px;
+  top: 0px;
+  left: 120px;
+  width: 1200px;
   z-index: 10;
-  width: 1400px;
-  height: 80px;
+  height: 60px;
   padding-top: 30px;
+  background-color: white;
 }
 
 #header h1 {
@@ -26,30 +27,29 @@ a {
 }
 
 #header h1 img {
-  width: 200px;
+  width: 150px;
 }
 
 #header form {
   float: right;
-  height: 50px;
-  padding-top: 8px;
+  height: 30px;
 }
 
 #header form #searchInput {
-  width: 170px;
-  height: 40px;
+  width: 140px;
+  height: 30px;
   margin-right: 10px;
 }
 
 #header form input[type="text"] {
-  width: 170px;
+  width: 150px;
   height: 37px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 30px;
   background: none;
   outline: none;
   color: black;
-  font-size: 17px;
+  font-size: 14px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -63,24 +63,29 @@ a {
   margin-top: 0;
 }
 
+#header form #searchBtn img {
+  width: 23px;
+}
+
 #main {
-  padding-top: 110px;
-  width: 1400px;
+  padding-top: 80px;
+  margin-left: 100px;
+  width: 1200px;
   margin: 0 auto;
 }
 
 #main > #movieList > li {
-  width: 300px;
+  width: 200px;
   list-style: none;
   float: left;
-  padding: 25px;
+  padding: 30px 30px 0px 60px;
 }
 
 #main > #movieList li .wrap {
   cursor: pointer;
   position: relative;
-  width: 300px;
-  height: 450px;
+  width: 200px;
+  height: 300px;
   display: block;
   overflow: hidden;
   border-radius: 15px;
@@ -88,21 +93,21 @@ a {
 }
 
 #main > #movieList > li h2 {
-  font-size: 20px;
+  font-size: 15px;
   padding-top: 15px;
 }
 
 #main > #movieList > li h3 {
   position: absolute;
   color: rgb(208, 204, 204);
-  top: 13px;
-  left: 13px;
-  font-size: 22px;
+  top: 12px;
+  left: 12px;
+  font-size: 16px;
   background-color: rgba(0, 0, 0, 0.8);
-  width: 35px;
-  height: 35px;
-  line-height: 39px;
-  border-radius: 9px;
+  width: 22px;
+  height: 22px;
+  line-height: 25px;
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -112,12 +117,12 @@ a {
   left: 0px;
   padding: 27px;
   background: black;
-  line-height: 25px;
+  line-height: 17px;
   opacity: 0;
   transition: 0.8s;
   color: white;
-  font-size: 18px;
-  height: 450px;
+  font-size: 11px;
+  height: 300px;
 }
 
 #main > #movieList > li > .wrap > span:hover {
@@ -126,6 +131,10 @@ a {
 
 #main > #movieList > li > .wrap p {
   display: none;
+}
+
+#main > #movieList > li > p {
+  font-size: 13px;
 }
 
 #main #topBtn {
@@ -138,7 +147,7 @@ a {
 }
 
 #main #topBtn img {
-  width: 40px;
+  width: 30px;
 }
 
 #main #topBtn:hover {
