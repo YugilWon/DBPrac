@@ -16,7 +16,7 @@ function showMovieList(val) {
     .then((response) => response.json())
     .then((data) => {
       let results = data["results"];
-      results.forEach((a, i) => {
+      results.map((a, i) => {
         let title = a["title"];
         let id = a["id"];
         let overview = a["overview"];
@@ -25,7 +25,7 @@ function showMovieList(val) {
         let poster = `https://image.tmdb.org/t/p/w200` + a["poster_path"];
         let rank = i + 1;
         // 대소문자 구분 없이 입력한 제목에 따른 영화 검색하기
-        if (title.toLowerCase().includes(val.toLowerCase())) {
+        if (title.toLowerCase().includes(val.toLowerCase().trim())) {
           const movieInfo = document.createElement("li");
           movieInfo.innerHTML = ` <div class= "wrap">
 			                              <img src=${poster} alt="Movie Poster">
