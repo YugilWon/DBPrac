@@ -35,7 +35,7 @@ function showMovieList(val) {
 			                            </div>
 			                            <h2>${title}</h2>
 			                            <p>개봉 ${date} 평점 ${average}</p>`;
-          movieList.appendChild(movieInfo);
+          document.querySelector("#movieList").appendChild(movieInfo);
         }
       });
     })
