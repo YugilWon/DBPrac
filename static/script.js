@@ -34,12 +34,19 @@ function showMovieList(val) {
                                     <p>${id}</p>
 			                            </div>
 			                            <h2>${title}</h2>
-			                            <p>개봉 ${date} 평점 ${average}</p>`;
+			                            <p>개봉 ${date} 평점 ${average}</p>
+                                  <button onclick="viewDetails('${id}')">자세히 보기</button>`;
+
           document.querySelector("#movieList").appendChild(movieInfo);
         }
       });
     })
+
     .catch((err) => console.error(err));
+}
+//페이지를 로드할 때 id값으로 불러오기
+function viewDetails(movieId) {
+  window.location.href = `Detail.html?id=${movieId}`;
 }
 
 // "" 가 입력된 상태로 함수 실행 --> 영화 전체목록 보여줌

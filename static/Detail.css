@@ -1,0 +1,138 @@
+/* 영화 카드부분 */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  height: 600px;
+  padding: 20px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 댓즐작성 폼 전체 */
+#comment-form input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* 댓글작성 텍스트 필드 */
+#comment-form textarea {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* 작성폼 */
+#comment-form {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+/* 댓글 남기기 버튼 */
+#comment-form button {
+  width: 100px;
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* 코멘트 디스플레이 부분 */
+.comment {
+  margin-bottom: 10px;
+  width: 500px;
+  width: 60%;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* 삭제버튼 */
+.delete-button {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* 작성자 이름 진하게 */
+.comment-author {
+  font-weight: bold;
+}
+
+/* 댓글내용 */
+.comment-text {
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* 수정버튼 */
+.edit-button {
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* 댓글 작성하기 버튼 */
+#show-comment-form-button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
