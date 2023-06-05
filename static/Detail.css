@@ -1,23 +1,31 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 /* 영화 카드부분 */
 .card {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 500px;
+  width: 300px;
   height: 600px;
   padding: 20px;
-  margin: 10px auto;
+  margin: 50px;
   border: 1px solid #ccc;
   border-radius: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+#movie-container {
+  text-align: center; /* 가로로 정렬되면서 중앙에 위치 */
+}
 
 .card img {
-  width: 200px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 10px; */
 }
 
 .card h1 {
@@ -135,4 +143,17 @@
   text-align: center;
   background-color: #333;
   color: #fff;
+}
+
+#player-wrapper {
+  position: relative;
+}
+
+#click-blocker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
 }

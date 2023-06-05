@@ -9,12 +9,15 @@
   <body>
     <script src="static/showDetail.js" type="module"></script>
     <script src="static/comment.js" type="module"></script>
-    <script src="static/Youtube.js" ></script>
+    <script src="static/Player.js" type="module"></script>
     <link href="static/Detail.css" rel="stylesheet" />
     <script src="https://www.youtube.com/iframe_api"></script>
     
     <!-- 유튜브 플레이어 -->
-    <div id="player"></div>
+    <div id="player-wrapper">
+      <div id="player"></div>
+      <div id="click-blocker"></div>
+    </div>
 
     <div id="movie-container"></div> 
     <div id="comment-form-container"></div>

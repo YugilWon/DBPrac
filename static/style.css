@@ -8,13 +8,19 @@ a {
   color: inherit;
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 #header {
   position: fixed;
   width: 100%;
   z-index: 10;
   height: 60px;
   padding-top: 30px;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
 #header h1 {

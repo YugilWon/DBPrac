@@ -23,37 +23,45 @@ window.addEventListener("DOMContentLoaded", () => {
       const poster = `https://image.tmdb.org/t/p/w200${posterPath}`;
 
       // 영화 카드 생성
-      const card = document.createElement("div");
-      card.classList.add("card");
+      const card1 = document.createElement("div");
+      card1.classList.add("card");
 
       // 영화 포스터
       const posterImg = document.createElement("img");
       posterImg.src = poster;
-      card.appendChild(posterImg);
+      posterImg.classList.add("poster-image");
+      card1.appendChild(posterImg);
+
+      // 컨테이너에 카드 추가
+      const container = document.getElementById("movie-container");
+      container.appendChild(card1);
+
+      // 두 번째 카드 (나머지 내용)
+      const card2 = document.createElement("div");
+      card2.classList.add("card");
 
       // 영화 제목
       const titleElement = document.createElement("h1");
       titleElement.textContent = title;
-      card.appendChild(titleElement);
+      card2.appendChild(titleElement);
 
       // 영화 내용
       const overviewElement = document.createElement("h2");
       overviewElement.textContent = overview;
-      card.appendChild(overviewElement);
+      card2.appendChild(overviewElement);
 
       // 영화 개봉일
       const releaseDateElement = document.createElement("p");
       releaseDateElement.textContent = "개봉일 : " + releaseDate;
-      card.appendChild(releaseDateElement);
+      card2.appendChild(releaseDateElement);
 
       // 영화 평점
       const averageVoteElement = document.createElement("p");
       averageVoteElement.textContent = "평점 : " + averageVote;
-      card.appendChild(averageVoteElement);
+      card2.appendChild(averageVoteElement);
 
-      // 컨테이너에 카드 추가
-      const container = document.getElementById("movie-container");
-      container.appendChild(card);
+      // 컨테이너에 두 번째 카드 추가
+      container.appendChild(card2);
     })
     .catch((err) => console.error(err));
 });
